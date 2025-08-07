@@ -1,0 +1,80 @@
+<!-- ========================================
+   FAVICON PIXEL ART - CAMYLLA OLIVEIRA
+   ======================================== -->
+<!-- Favicon SVG para a aba do navegador -->
+<!-- Tamanho: 32x32 pixels (padrão para favicons) -->
+<!-- ViewBox: 0 0 32 32 (coordenadas internas) -->
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  
+  <!-- ========================================
+       FUNDO DO FAVICON
+       ======================================== -->
+  <!-- Retângulo de fundo preto para manter consistência com o tema -->
+  <rect width="32" height="32" fill="#0f0f0f"/>
+  
+  <!-- ========================================
+       LETRA C PIXEL ART SIMPLIFICADA
+       ======================================== -->
+  <!-- Grupo da letra C em rosa (cor principal do tema) -->
+  <g fill="#ff69b4">
+    
+    <!-- LINHA SUPERIOR DA LETRA C -->
+    <!-- Cada retângulo representa um pixel 2x2 -->
+    <rect x="8" y="8" width="2" height="2"/>   <!-- Pixel 1 da linha superior -->
+    <rect x="10" y="8" width="2" height="2"/>  <!-- Pixel 2 da linha superior -->
+    <rect x="12" y="8" width="2" height="2"/>  <!-- Pixel 3 da linha superior -->
+    <rect x="14" y="8" width="2" height="2"/>  <!-- Pixel 4 da linha superior -->
+    <rect x="16" y="8" width="2" height="2"/>  <!-- Pixel 5 da linha superior -->
+    
+    <!-- LINHA ESQUERDA DA LETRA C -->
+    <!-- Forma a borda esquerda da letra C -->
+    <rect x="8" y="10" width="2" height="2"/>  <!-- Pixel 1 da linha esquerda -->
+    <rect x="8" y="12" width="2" height="2"/>  <!-- Pixel 2 da linha esquerda -->
+    <rect x="8" y="14" width="2" height="2"/>  <!-- Pixel 3 da linha esquerda -->
+    <rect x="8" y="16" width="2" height="2"/>  <!-- Pixel 4 da linha esquerda -->
+    <rect x="8" y="18" width="2" height="2"/>  <!-- Pixel 5 da linha esquerda -->
+    
+    <!-- LINHA INFERIOR DA LETRA C -->
+    <!-- Forma a base da letra C (não vai até a borda esquerda) -->
+    <rect x="10" y="20" width="2" height="2"/> <!-- Pixel 1 da linha inferior -->
+    <rect x="12" y="20" width="2" height="2"/> <!-- Pixel 2 da linha inferior -->
+    <rect x="14" y="20" width="2" height="2"/> <!-- Pixel 3 da linha inferior -->
+    <rect x="16" y="20" width="2" height="2"/> <!-- Pixel 4 da linha inferior -->
+  </g>
+  
+  <!-- ========================================
+       SÍMBOLO DE CÓDIGO SIMPLIFICADO
+       ======================================== -->
+  <!-- Grupo de símbolos de código em ciano (cor secundária do tema) -->
+  <g fill="#00ffff">
+    
+    <!-- CHAVES DE CÓDIGO - LINHA SUPERIOR -->
+    <!-- Representa chaves de programação { } -->
+    <rect x="20" y="10" width="1" height="2"/> <!-- Chave superior 1 -->
+    <rect x="21" y="10" width="1" height="2"/> <!-- Chave superior 2 -->
+    <rect x="22" y="10" width="1" height="2"/> <!-- Chave superior 3 -->
+    <rect x="23" y="10" width="1" height="2"/> <!-- Chave superior 4 -->
+    
+    <!-- CHAVES DE CÓDIGO - LINHA DO MEIO -->
+    <!-- Representa chaves de programação { } -->
+    <rect x="20" y="14" width="1" height="2"/> <!-- Chave do meio 1 -->
+    <rect x="21" y="14" width="1" height="2"/> <!-- Chave do meio 2 -->
+    <rect x="22" y="14" width="1" height="2"/> <!-- Chave do meio 3 -->
+    <rect x="23" y="14" width="1" height="2"/> <!-- Chave do meio 4 -->
+    
+    <!-- CHAVES DE CÓDIGO - LINHA INFERIOR -->
+    <!-- Representa chaves de programação { } -->
+    <rect x="20" y="18" width="1" height="2"/> <!-- Chave inferior 1 -->
+    <rect x="21" y="18" width="1" height="2"/> <!-- Chave inferior 2 -->
+    <rect x="22" y="18" width="1" height="2"/> <!-- Chave inferior 3 -->
+    <rect x="23" y="18" width="1" height="2"/> <!-- Chave inferior 4 -->
+  </g>
+  
+  <!-- ========================================
+       BORDA PIXEL ART
+       ======================================== -->
+  <!-- Borda rosa para dar destaque ao favicon -->
+  <!-- stroke-width="1" para manter a proporção em 32x32 -->
+  <rect x="0" y="0" width="32" height="32" fill="none" stroke="#ff69b4" stroke-width="1"/>
+  
+</svg>

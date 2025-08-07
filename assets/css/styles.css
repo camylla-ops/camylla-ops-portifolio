@@ -1,0 +1,1029 @@
+/* ========================================
+   IMPORTAÇÃO DE FONTES
+   ======================================== */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
+
+/* ========================================
+   VARIÁVEIS CSS 
+   ======================================== */
+:root {
+    /* CORES PRINCIPAIS */
+    --pixel-black: #0f0f0f;
+    --pixel-dark: #1a1a1a;
+    --pixel-gray: #2a2a2a;
+    --pixel-light-gray: #4a4a4a;
+    --pixel-white: #ffffff;
+    
+    /* CORES DE DESTAQUE */
+    --pixel-pink: #ff69b4;
+    --pixel-purple: #8a2be2;
+    --pixel-blue: #00bfff;
+    --pixel-green: #00ff7f;
+    --pixel-yellow: #ffff00;
+    --pixel-orange: #ff8c00;
+    --pixel-red: #ff4500;
+    
+    /* CORES COMPLEMENTARES */
+    --pixel-cyan: #00ffff;
+    --pixel-magenta: #ff00ff;
+    --pixel-lime: #32cd32;
+    --pixel-gold: #ffd700;
+    --pixel-silver: #c0c0c0;
+    --pixel-bronze: #cd7f32;
+    
+    /* EFEITOS */
+    --pixel-shadow: rgba(0, 0, 0, 0.8);
+    --pixel-glow: rgba(255, 105, 180, 0.6);
+    --transicao: all 0.2s ease;
+}
+
+/* ========================================
+   RESET E CONFIGURAÇÕES GERAIS
+   ======================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'VT323', monospace;
+    line-height: 1.6;
+    color: var(--pixel-white);
+    background: var(--pixel-black);
+    background-image: 
+        radial-gradient(circle at 25% 25%, var(--pixel-purple) 2px, transparent 2px),
+        radial-gradient(circle at 75% 75%, var(--pixel-cyan) 2px, transparent 2px);
+    background-size: 50px 50px;
+    image-rendering: pixelated;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ========================================
+   TÍTULOS
+   ======================================== */
+.pixel-title {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2rem;
+    color: var(--pixel-pink);
+    text-shadow: 
+        2px 2px 0 var(--pixel-black),
+        4px 4px 0 var(--pixel-purple);
+    margin-bottom: 2rem;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.pixel-subtitle {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.5rem;
+    color: var(--pixel-cyan);
+    text-shadow: 
+        2px 2px 0 var(--pixel-black),
+        4px 4px 0 var(--pixel-blue);
+    margin-bottom: 1rem;
+}
+
+.pixel-text {
+    font-family: 'VT323', monospace;
+    font-size: 1.3rem;
+    color: var(--pixel-white);
+    text-shadow: 1px 1px 0 var(--pixel-black);
+}
+
+.pixel-description {
+    font-family: 'VT323', monospace;
+    font-size: 1.1rem;
+    color: var(--pixel-silver);
+    margin: 1rem 0;
+}
+
+.pixel-info {
+    font-family: 'VT323', monospace;
+    font-size: 1rem;
+    color: var(--pixel-light-gray);
+    margin: 1rem 0;
+}
+
+/* ========================================
+   SEÇÃO SOBRE
+   ======================================== */
+.sobre {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 60px 20px;
+    background: var(--pixel-black);
+    position: relative;
+}
+
+.sobre::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        linear-gradient(45deg, transparent 48%, var(--pixel-purple) 50%, transparent 52%),
+        linear-gradient(-45deg, transparent 48%, var(--pixel-cyan) 50%, transparent 52%);
+    background-size: 20px 20px;
+    opacity: 0.1;
+    image-rendering: pixelated;
+}
+
+.sobre-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.sobre-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.highlight {
+    color: var(--pixel-pink) !important;
+    text-shadow: 
+        2px 2px 0 var(--pixel-black),
+        4px 4px 0 var(--pixel-purple) !important;
+}
+
+.sobre-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+/* ========================================
+   BOTÕES
+   ======================================== */
+.btn {
+    font-family: 'Press Start 2P', cursive;
+    padding: 12px 24px;
+    border: 3px solid var(--pixel-pink);
+    background: var(--pixel-black);
+    color: var(--pixel-pink);
+    text-decoration: none;
+    transition: var(--transicao);
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    font-size: 0.8rem;
+    text-shadow: 1px 1px 0 var(--pixel-black);
+    box-shadow: 
+        4px 4px 0 var(--pixel-purple),
+        inset 2px 2px 0 var(--pixel-black);
+}
+
+.btn:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 
+        6px 6px 0 var(--pixel-purple),
+        inset 2px 2px 0 var(--pixel-black);
+}
+
+.btn-primary {
+    border-color: var(--pixel-pink);
+    color: var(--pixel-pink);
+}
+
+.btn-secondary {
+    border-color: var(--pixel-cyan);
+    color: var(--pixel-cyan);
+    box-shadow: 
+        4px 4px 0 var(--pixel-blue),
+        inset 2px 2px 0 var(--pixel-black);
+}
+
+.btn-secondary:hover {
+    box-shadow: 
+        6px 6px 0 var(--pixel-blue),
+        inset 2px 2px 0 var(--pixel-black);
+}
+
+.btn-tertiary {
+    border-color: var(--pixel-orange);
+    color: var(--pixel-orange);
+    box-shadow: 
+        4px 4px 0 var(--pixel-red),
+        inset 2px 2px 0 var(--pixel-black);
+}
+
+.btn-tertiary:hover {
+    box-shadow: 
+        6px 6px 0 var(--pixel-red),
+        inset 2px 2px 0 var(--pixel-black);
+}
+
+/* ========================================
+   IMAGEM DE PERFIL
+   ======================================== */
+.sobre-image-desktop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sobre-image-mobile {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.pixel-frame {
+    width: 350px;
+    height: 350px;
+    border: 8px solid var(--pixel-pink);
+    background: var(--pixel-black);
+    box-shadow: 
+        8px 8px 0 var(--pixel-purple),
+        inset 4px 4px 0 var(--pixel-gray);
+    position: relative;
+    overflow: hidden;
+}
+
+.pixel-frame::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        linear-gradient(90deg, transparent 48%, var(--pixel-pink) 50%, transparent 52%),
+        linear-gradient(0deg, transparent 48%, var(--pixel-pink) 50%, transparent 52%);
+    background-size: 20px 20px;
+    opacity: 0.3;
+    image-rendering: pixelated;
+}
+
+.profile-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    image-rendering: pixelated;
+    filter: contrast(1.2) brightness(0.9) saturate(1.1);
+}
+
+/* ========================================
+   SEÇÃO FERRAMENTAS
+   ======================================== */
+.ferramentas {
+    padding: 80px 0;
+    background: var(--pixel-dark);
+    border-top: 4px solid var(--pixel-cyan);
+    border-bottom: 4px solid var(--pixel-cyan);
+}
+
+.ferramentas-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.ferramentas-linha {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.ferramenta-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100px;
+    height: 100px;
+    padding: 0.5rem;
+    border: 3px solid var(--pixel-gray);
+    background: var(--pixel-black);
+    box-shadow: 
+        4px 4px 0 var(--pixel-light-gray),
+        inset 2px 2px 0 var(--pixel-black);
+    box-sizing: border-box;
+    transition: var(--transicao);
+    overflow: hidden;
+}
+
+.ferramenta-item:hover {
+    transform: translate(-2px, -2px);
+    border-color: var(--pixel-pink);
+    box-shadow: 
+        6px 6px 0 var(--pixel-purple),
+        inset 2px 2px 0 var(--pixel-black);
+}
+
+.pixel-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100px;
+    height: 100px;
+}
+
+.pixel-icon img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    image-rendering: pixelated;
+    margin-top: 0.5rem;
+    filter: brightness(1.1) contrast(1.1);
+}
+
+/* ========================================
+   ÍCONES DE TECNOLOGIA
+   ======================================== */
+.tech-icon {
+    font-size: 2.5rem;
+    color: var(--pixel-white) !important;
+    margin-top: 0.5rem;
+    text-shadow: 1px 1px 0 var(--pixel-black);
+    transition: var(--transicao);
+}
+
+.ferramenta-item:hover .tech-icon {
+    color: var(--pixel-pink) !important;
+    transform: scale(1.1);
+    text-shadow: 
+        1px 1px 0 var(--pixel-black),
+        0 0 10px var(--pixel-pink);
+}
+
+.pixel-texto {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.5rem;
+    color: var(--pixel-pink);
+    text-shadow: 1px 1px 0 var(--pixel-black);
+    margin-top: 1rem;
+    margin-bottom: 0;
+    line-height: 1.2;
+    text-align: center;
+}
+
+/* ========================================
+   SEÇÃO PROJETOS
+   ======================================== */
+.projetos {
+    padding: 80px 0;
+    background: var(--pixel-black);
+    border-top: 4px solid var(--pixel-green);
+}
+
+/* ========================================
+   NAVEGAÇÃO ENTRE SEÇÕES DE PROJETOS
+   ======================================== */
+.projetos-nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.projeto-nav-btn {
+    font-family: 'Press Start 2P', cursive;
+    background: var(--pixel-black);
+    color: var(--pixel-white);
+    border: 3px solid var(--pixel-gray);
+    padding: 12px 24px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: var(--transicao);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.7rem;
+    box-shadow: 
+        4px 4px 0 var(--pixel-light-gray),
+        inset 2px 2px 0 var(--pixel-black);
+}
+
+.projeto-nav-btn:hover {
+    transform: translate(-2px, -2px);
+    border-color: var(--pixel-green);
+    box-shadow: 
+        6px 6px 0 var(--pixel-lime),
+        inset 2px 2px 0 var(--pixel-black);
+}
+
+.projeto-nav-btn.active {
+    background: var(--pixel-green);
+    color: var(--pixel-black);
+    border-color: var(--pixel-lime);
+    box-shadow: 
+        4px 4px 0 var(--pixel-lime),
+        inset 2px 2px 0 var(--pixel-green);
+}
+
+.pixel-btn-text {
+    font-family: 'VT323', monospace;
+    font-size: 1rem;
+}
+
+/* ========================================
+   SEÇÕES DE PROJETOS
+   ======================================== */
+.projeto-secao {
+    display: none;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: var(--transicao);
+}
+
+.projeto-secao.ativa {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ========================================
+   CARROSSEL DE PROJETOS
+   ======================================== */
+.projetos-carousel {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    overflow: hidden;
+    width: 100%;
+}
+
+.projetos-container {
+    display: flex;
+    gap: 2rem;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    padding: 1rem 0;
+}
+
+.projeto-card {
+    min-width: 520px;
+    max-width: 100%;
+    background: var(--pixel-dark);
+    border: 4px solid var(--pixel-gray);
+    padding: 2rem 1.5rem;
+    border-radius: 8px;
+    box-shadow: 
+        6px 6px 0 var(--pixel-light-gray),
+        inset 2px 2px 0 var(--pixel-black);
+    transition: var(--transicao);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.2rem;
+    overflow: hidden;
+}
+
+.projeto-card:hover {
+    transform: translate(-3px, -3px);
+    border-color: var(--pixel-pink);
+    box-shadow: 
+        8px 8px 0 var(--pixel-purple),
+        inset 3px 3px 0 var(--pixel-black);
+}
+
+.pixel-project-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.pixel-project-img {
+    width: 100px;
+    height: 100px;
+    max-width: 100%;
+    image-rendering: pixelated;
+    border: 4px solid var(--pixel-pink);
+    box-shadow: 6px 6px 0 var(--pixel-purple), 2px 2px 0 var(--pixel-black);
+    background: var(--pixel-black);
+    display: block;
+    margin: 0 auto 1rem auto;
+}
+
+.projeto-info h4 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: var(--pixel-pink);
+    text-shadow: 1px 1px 0 var(--pixel-black);
+}
+
+.projeto-info p {
+    font-family: 'VT323', monospace;
+    margin-bottom: 1.5rem;
+    color: var(--pixel-white);
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+.projeto-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.projeto-tech span {
+    font-family: 'VT323', monospace;
+    background: var(--pixel-gray);
+    color: var(--pixel-cyan);
+    padding: 0.3rem 0.8rem;
+    border: 2px solid var(--pixel-light-gray);
+    font-size: 0.8rem;
+    font-weight: bold;
+    box-shadow: 
+        2px 2px 0 var(--pixel-black),
+        inset 1px 1px 0 var(--pixel-light-gray);
+}
+
+/* ========================================
+   BOTÕES DO CARROSSEL
+   ======================================== */
+.carousel-btn {
+    font-family: 'Press Start 2P', cursive;
+    background: var(--pixel-pink);
+    color: var(--pixel-black);
+    border: 3px solid var(--pixel-purple);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transicao);
+    box-shadow: 
+        4px 4px 0 var(--pixel-purple),
+        inset 2px 2px 0 var(--pixel-pink);
+    font-size: 1rem;
+}
+
+.carousel-btn:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 
+        6px 6px 0 var(--pixel-purple),
+        inset 2px 2px 0 var(--pixel-pink);
+}
+
+.carousel-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.pixel-arrow {
+    font-family: 'VT323', monospace;
+    font-size: 1.5rem;
+}
+
+/* ========================================
+   SEÇÃO CONTATO
+   ======================================== */
+#contato {
+    padding: 80px 0;
+    background: var(--pixel-dark);
+    border-top: 4px solid var(--pixel-orange);
+    text-align: center;
+}
+
+.contato-content p {
+    font-family: 'VT323', monospace;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: var(--pixel-white);
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.social-icons a {
+    width: 60px;
+    height: 60px;
+    background: var(--pixel-black);
+    color: var(--pixel-pink);
+    border: 3px solid var(--pixel-pink);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    transition: var(--transicao);
+    text-decoration: none;
+    box-shadow: 
+        4px 4px 0 var(--pixel-purple),
+        inset 2px 2px 0 var(--pixel-black);
+}
+
+.social-icons a:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 
+        6px 6px 0 var(--pixel-purple),
+        inset 2px 2px 0 var(--pixel-black);
+}
+
+.pixel-social {
+    width: 32px;
+    height: 32px;
+    image-rendering: pixelated;
+    display: block;
+    font-size: 2rem;
+}
+
+.contact-info {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+.contact-info li {
+    font-family: 'VT323', monospace;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.1rem;
+    color: var(--pixel-white);
+}
+
+.contact-info a {
+    color: var(--pixel-cyan);
+    text-decoration: none;
+    font-weight: bold;
+    text-shadow: 1px 1px 0 var(--pixel-black);
+}
+
+.contact-info a:hover {
+    color: var(--pixel-pink);
+}
+
+.pixel-icon-small {
+    width: 20px;
+    height: 20px;
+    image-rendering: pixelated;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 0.5rem;
+}
+
+/* ========================================
+   BOTÃO VOLTAR AO TOPO
+   ======================================== */
+.btn-topo {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: var(--pixel-pink);
+    color: var(--pixel-black);
+    border: 3px solid var(--pixel-purple);
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: var(--transicao);
+    box-shadow: 
+        4px 4px 0 var(--pixel-purple),
+        inset 2px 2px 0 var(--pixel-pink);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+}
+
+.btn-topo.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.btn-topo:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 
+        6px 6px 0 var(--pixel-purple),
+        inset 2px 2px 0 var(--pixel-pink);
+}
+
+/* ========================================
+   RESPONSIVIDADE
+   ======================================== */
+@media (max-width: 768px) {
+    .sobre-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .sobre-text {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .sobre-text h1 { order: 1; }
+    .sobre-text h2 { order: 2; }
+    .sobre-text .sobre-image-mobile { order: 3; }
+    .sobre-text p { order: 4; }
+    .sobre-text .pixel-description { order: 5; }
+    .sobre-text .pixel-info { order: 6; }
+    .sobre-text .sobre-buttons { order: 7; }
+
+    .sobre-image-desktop {
+        display: none;
+    }
+
+    .sobre-image-mobile {
+        display: flex !important;
+        margin: 2rem 0;
+        order: 2;
+    }
+
+    .pixel-title {
+        font-size: 1.5rem;
+    }
+
+    .pixel-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .sobre-buttons {
+        justify-content: center;
+    }
+
+    .pixel-frame {
+        width: 250px;
+        height: 250px;
+    }
+
+    .ferramentas-linha {
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .ferramenta-item {
+        min-width: 80px;
+        padding: 0.8rem;
+    }
+
+    .pixel-icon {
+        font-size: 0.5rem;
+    }
+
+    .pixel-icon img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .tech-icon {
+        font-size: 2rem;
+    }
+
+    .ferramenta-item span {
+        font-size: 0.8rem;
+    }
+
+    .projetos-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .projeto-nav-btn {
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+    }
+
+    .projetos-container {
+        display: flex;
+        gap: 0;
+        scroll-snap-type: x mandatory;
+        scroll-snap-stop: always;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    .projetos-container::-webkit-scrollbar {
+        display: none;
+    }
+
+    .projeto-card {
+        min-width: 100%;
+        max-width: 100%;
+        width: 100%;
+        scroll-snap-align: start;
+        flex-shrink: 0;
+        padding: 1.25rem 1rem;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    .projeto-info h4 {
+        font-size: 0.9rem;
+        margin-bottom: 0.6rem;
+    }
+
+    .projeto-info p {
+        font-size: 0.95rem;
+        line-height: 1.4;
+        margin-bottom: 0.9rem;
+    }
+
+    .projeto-tech span {
+        font-size: 0.75rem;
+        padding: 0.25rem 0.6rem;
+    }
+
+    .pixel-project-img {
+        width: 100px;
+        height: 80px;
+        margin: 0 auto 0.75rem auto;
+        object-fit: contain;
+    }
+
+    .social-icons {
+        gap: 1rem;
+    }
+
+    .social-icons a {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+
+    .btn-topo {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sobre-content {
+        gap: 1.5rem;
+    }
+
+    .sobre-image-mobile {
+        margin: 1.5rem 0;
+    }
+
+    .pixel-title {
+        font-size: 1.2rem;
+    }
+
+    .pixel-subtitle {
+        font-size: 1rem;
+    }
+
+    .pixel-frame {
+        width: 200px;
+        height: 200px;
+    }
+
+    .ferramentas-linha {
+        gap: 0.8rem;
+        margin-bottom: 1rem;
+    }
+
+    .ferramenta-item {
+        min-width: 70px;
+        padding: 0.6rem;
+    }
+
+    .pixel-icon {
+        font-size: 0.4rem;
+    }
+
+    .pixel-icon img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .tech-icon {
+        font-size: 1.5rem;
+    }
+
+    .ferramenta-item span {
+        font-size: 0.7rem;
+    }
+
+    .projetos-container {
+        display: flex;
+        gap: 0;
+        scroll-snap-type: x mandatory;
+        scroll-snap-stop: always;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    .projetos-container::-webkit-scrollbar {
+        display: none;
+    }
+
+    .projeto-card {
+        min-width: 100%;
+        max-width: 100%;
+        width: 100%;
+        scroll-snap-align: start;
+        flex-shrink: 0;
+        padding: 1rem 0.875rem;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    .projeto-info h4 {
+        font-size: 0.85rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .projeto-info p {
+        font-size: 0.9rem;
+        line-height: 1.35;
+        margin-bottom: 0.8rem;
+    }
+
+    .projeto-tech span {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.5rem;
+    }
+
+    .pixel-project-img {
+        width: 72px;
+        height: 72px;
+        margin: 0 auto 0.6rem auto;
+        object-fit: contain;
+    }
+
+    .projeto-nav-btn {
+        padding: 10px 20px;
+        font-size: 0.6rem;
+    }
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+.footer {
+    background: var(--pixel-black);
+    border-top: 4px solid var(--pixel-pink);
+    padding: 2rem 0;
+    margin-top: 4rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.footer-text {
+    font-family: 'VT323', monospace;
+    font-size: 1.1rem;
+    color: var(--pixel-silver);
+    margin-bottom: 0.5rem;
+    text-shadow: 1px 1px 0 var(--pixel-black);
+}
+
+.footer-love {
+    font-family: 'VT323', monospace;
+    font-size: 1rem;
+    color: var(--pixel-pink);
+    text-shadow: 1px 1px 0 var(--pixel-black);
+    margin: 0;
+}
+
