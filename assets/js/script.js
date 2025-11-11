@@ -381,6 +381,7 @@ window.addEventListener('scroll', debounce(() => {
 
 // ========================================
 // ATUALIZAR ANO NO FOOTER
+
 // ========================================
 // Atualiza automaticamente o ano no footer
 function atualizarAno() {
