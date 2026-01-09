@@ -62,21 +62,34 @@
                         </div>
                     </div>
 
-                    <div class="ferramenta-item">
+                     <div class="ferramenta-item">
                         <div class="pixel-icon">
-                         <span class="pixel-texto">FASTAPI</span>
-                         <i class="devicon-fastapi-plain tech-icon"></i>
+                            <span class="pixel-texto">JAVA</span>
+                            <i class="devicon-java-plain tech-icon"></i>
                         </div>
                     </div>
 
+                    <div class="ferramenta-item">
+                        <div class="pixel-icon">
+                            <span class="pixel-texto">SPRING BOOT</span>
+                            <i class="devicon-spring-plain tech-icon"></i>
+                        </div>
+                    </div>
 
                     <div class="ferramenta-item">
                         <div class="pixel-icon">
-                            <span class="pixel-texto">DJANGO</span>
-                            <i class="devicon-django-plain tech-icon"></i>
-                         </div>
-                
+                            <span class="pixel-texto">APIs REST</span>
+                            <i class="fas fa-code tech-icon"></i>
+                        </div>
                     </div>
+
+                    <div class="ferramenta-item">
+                        <div class="pixel-icon">
+                            <span class="pixel-texto">DOCKER</span>
+                            <i class="devicon-docker-plain tech-icon"></i>
+                        </div>
+                    </div>
+
                     <div class="ferramenta-item">
                         <div class="pixel-icon">
                             <span class="pixel-texto">GIT</span>
@@ -104,12 +117,7 @@
                         </div>
                         
                     </div>
-                    <div class="ferramenta-item">
-                        <div class="pixel-icon">
-                            <span class="pixel-texto">PANDAS</span>
-                            <i class="fas fa-chart-line tech-icon"></i>        
-                        </div>
-                    </div>
+                    
                     <div class="ferramenta-item">
                         <div class="pixel-icon">
                             <span class="pixel-texto">BIGQUERY</span>
@@ -141,33 +149,7 @@
                         </div>
                     </div>
 
-                    <div class="ferramenta-item">
-                        <div class="pixel-icon">
-                            <span class="pixel-texto">JAVA</span>
-                            <i class="devicon-java-plain tech-icon"></i>
-                        </div>
-                    </div>
-
-                    <div class="ferramenta-item">
-                        <div class="pixel-icon">
-                            <span class="pixel-texto">SPRING BOOT</span>
-                            <i class="devicon-spring-plain tech-icon"></i>
-                        </div>
-                    </div>
-
-                    <div class="ferramenta-item">
-                        <div class="pixel-icon">
-                            <span class="pixel-texto">APIs REST</span>
-                            <i class="fas fa-code tech-icon"></i>
-                        </div>
-                    </div>
-
-                    <div class="ferramenta-item">
-                        <div class="pixel-icon">
-                            <span class="pixel-texto">DOCKER</span>
-                            <i class="devicon-docker-plain tech-icon"></i>
-                        </div>
-                    </div>
+                   
 
                 </div>
             </div>
@@ -221,32 +203,79 @@
                 </div>
             </div>
 
-            <!-- SEÇÃO BACK-END -->
-            <div id="backend-secao" class="projeto-secao">
-                <div class="projetos-carousel">
-                    <button class="carousel-btn prev" onclick="navegarProjetos('backend', -1)">
-                        <span class="pixel-arrow">◀</span>
-                    </button>
-                                         <div class="projetos-container" id="backend-projetos">
-                         <div class="projeto-card">
-                             <div class="pixel-project-icon">
-                                 <img src="assets/img/projetos/placeholder.png" alt="Em breve" class="pixel-project-img">
-                             </div>
-                             <div class="projeto-info">
-                                 <h4>Em Breve</h4>
-                                 <p>Projetos de Back-End em breve</p>
-                                 <div class="projeto-tech">
-                                     <span>Python</span>
-                                     
-                                 </div>
-                             </div>
-                         </div>
-                     </div>
-                    <button class="carousel-btn next" onclick="navegarProjetos('backend', 1)">
-                        <span class="pixel-arrow">▶</span>
-                    </button>
+<!-- SEÇÃO BACK-END -->
+<div id="backend-secao" class="projeto-secao">
+    <div class="projetos-carousel">
+        <button class="carousel-btn prev" onclick="navegarProjetos('backend', -1)">
+            <span class="pixel-arrow">◀</span>
+        </button>
+
+        <div class="projetos-container" id="backend-projetos">
+
+            <!-- PROJETO 1 -->
+            <div class="projeto-card">
+                <div class="pixel-project-icon">
+                    <img src="assets/img/projetos/task-manager-api.png"
+                         alt="Task Manager API"
+                         class="pixel-project-img">
+                </div>
+
+                <div class="projeto-info">
+                    <h4>Task Manager API</h4>
+
+                    <p>
+                        API REST para gerenciamento de tarefas por usuário.
+                        Implementa autenticação Basic Auth com BCrypt,
+                        validações de regras de negócio e deploy com Docker no Render.
+                    </p>
+
+                    <div class="projeto-tech">
+                        <span>Java 17</span>
+                        <span>Spring Boot</span>
+                        <span>REST API</span>
+                        <span>Docker</span>
+                    </div>
+
+                    <div class="sobre-buttons">
+                        <a href="https://github.com/camylla-ops/todolist-java-springboot"
+                           class="btn btn-secondary"
+                           target="_blank">
+                            Ver no GitHub
+                        </a>
+                    </div>
                 </div>
             </div>
+
+            <!-- PROJETO 2 (PLACEHOLDER PADRONIZADO) -->
+            <div class="projeto-card">
+                <div class="pixel-project-icon">
+                    <img src="assets/img/projetos/placeholder.png"
+                         alt="Novo projeto Back-End"
+                         class="pixel-project-img">
+                </div>
+
+                <div class="projeto-info">
+                    <h4>Projeto Back-End em Desenvolvimento</h4>
+
+                    <p>
+                      
+                    </p>
+
+                    <div class="projeto-tech">
+                        <span>Java</span>
+                        <span>Spring</span>
+                        <span>Back-End</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <button class="carousel-btn next" onclick="navegarProjetos('backend', 1)">
+            <span class="pixel-arrow">▶</span>
+        </button>
+    </div>
+</div>
 
             
 
